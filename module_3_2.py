@@ -1,7 +1,7 @@
 
 #module_3_2.py
 
-# Задача "Рассылка писем"
+# Задача "Рассылка писем" - Способы вызова функции
 
 
 def send_email(message, recipient, sender="university.help@gmail.com"):
