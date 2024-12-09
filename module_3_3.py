@@ -28,3 +28,10 @@ print_params(**values_dict)            # 9. и values_dict в функцию pri
 
 values_list_2 = [54.32, 'Строка']
 print_params(*values_list_2,42)     # 10. Проверьте, работает ли print_params(*values_list_2, 42)
+
+def append_to_list(item, values_list=None):
+    if values_list is None:
+        values_list = []
+        values_list.append(item)
+print_params(*values_list)
+print_params(values_list)              # 12. Просто так)
