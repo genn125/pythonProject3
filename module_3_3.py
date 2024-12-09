@@ -10,7 +10,7 @@ def count_calls():
 
 def print_params(a = 1,  b = 'строка', c = True):
     count_calls()
-    print(f'{calls} -', a,b,c)
+    print(f'{calls:02d} -', a,b,c)     # :02d - Ноль перед 1-9
 
 print_params(45, 90)             # 1.
 print_params(45, 90, 180)     # 2. Вызовите функцию print_params с разным количеством аргументов,
