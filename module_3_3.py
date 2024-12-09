@@ -33,5 +33,5 @@ def append_to_list(item, values_list=None):
     if values_list is None:
         values_list = []
         values_list.append(item)
-print_params(*values_list)
+print_params(*values_list)             # 11.
 print_params(values_list)              # 12. Просто так)
