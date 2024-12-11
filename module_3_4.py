@@ -3,23 +3,16 @@
 
 # "Однокоренные" - использования параметров *args/ **kwargs на практике
 
-def single_root_words(*other_words, root_word='ГРИБ', ):
+def single_root_words(txt, *other_words, root_word='гриб'):
     same_words = []
 
     for i in other_words:
 
-        if root_word.lower() in i.lower():
+        if root_word.lower() in i.lower() or i.lower() in root_word.lower():
             same_words.append(i)
 
-    return print(*same_words, sep=', ')
+    return print(f"{txt} {', '.join([*same_words,])}", end='\n\n')   # Не понятно как распечатался список, который выводился кортежем
 
-
-single_root_words('грибник', 'грибной', 'гробница', 'грибочек')
-single_root_words('Disablement', 'Oble', 'Mable', 'Disable', 'Bagel', root_word = 'ABL')
-
-'''
-ABL — Любительский баскетбольный чемпионат в Москве. Для всех людей. Pro Omni Populo.
-Oble — деревня в административном районе гмина Ядув в Воломинском повяте Мазовецкого воеводства
-на востоке центральной Польши.
-'''
-
+single_root_words('"гриб" есть в словах:','грибник', 'гриБной', 'гробница', 'грибОЧЕк')
+single_root_words('В слове "обелиск" присутствуют слова:','Чёрный', 'Обе', 'двЕ', 'ЛИС',
+                  root_word = 'обелиск')
